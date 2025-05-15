@@ -1,0 +1,330 @@
+/* Account Page Specific Styles */
+@import 'common.css';
+
+/* User Dropdown */
+.user-dropdown {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.user-dropdown-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.user-dropdown-button span {
+  margin-right: 0.5rem;
+}
+
+.user-dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
+  display: none;
+  z-index: 100;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+}
+
+.user-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-dark);
+}
+
+.user-dropdown-item:hover {
+  background-color: var(--background-alt);
+}
+
+.user-dropdown-item.active {
+  background-color: rgba(229, 62, 62, 0.1);
+  color: var(--primary);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 0.5rem 0;
+}
+
+/* Account Section */
+.account-section {
+  background-color: var(--background-alt);
+  min-height: calc(100vh - 60px - 314px); /* Subtract header and footer height */
+}
+
+.account-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+.account-sidebar {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.account-user {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.account-avatar {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.account-user-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.account-user-role {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.account-nav {
+  padding: 1rem 0;
+}
+
+.account-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-dark);
+  transition: background-color 0.3s ease;
+}
+
+.account-nav-link svg {
+  margin-right: 0.75rem;
+}
+
+.account-nav-link:hover {
+  background-color: var(--background-alt);
+}
+
+.account-nav-link.active {
+  background-color: rgba(229, 62, 62, 0.1);
+  color: var(--primary);
+  border-right: 3px solid var(--primary);
+}
+
+.account-nav-divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 0.5rem 0;
+}
+
+.account-content {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.account-header {
+  margin-bottom: 2rem;
+}
+
+.account-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.account-subtitle {
+  color: var(--text-light);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--background-alt);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.stat-card-title {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stat-card-icon {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.dashboard-section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-item {
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  margin-right: 1rem;
+  color: var(--primary);
+}
+
+.activity-text {
+  margin-bottom: 0.25rem;
+}
+
+.activity-time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-item {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--background-alt);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.job-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  margin-right: 1.5rem;
+}
+
+.job-day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.job-month {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.job-details {
+  flex: 1;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.job-location, .job-time {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.job-status {
+  margin-left: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-upcoming {
+  background-color: rgba(66, 153, 225, 0.1);
+  color: #3182ce;
+}
+
+.status-completed {
+  background-color: rgba(72, 187, 120, 0.1);
+  color: #38a169;
+}
+
+.status-cancelled {
+  background-color: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .account-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .account-sidebar {
+    margin-bottom: 1.5rem;
+  }
+}

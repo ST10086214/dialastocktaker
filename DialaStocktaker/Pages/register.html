@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Dial a Stocktaker</title>
+  <link rel="stylesheet" href="register.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">Dial a Stocktaker</a>
+        
+        <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        
+        <nav class="desktop-nav">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-link">Login</a>
+          <a href="register.html" class="button active">Register</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="faq.html" class="mobile-nav-link">FAQ</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="login.html" class="mobile-nav-link">Login</a>
+        <a href="register.html" class="mobile-nav-link button active">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header animate-fade-in">
+    <div class="container">
+      <h1 class="page-title">Create a New Account</h1>
+      <p class="page-subtitle">Join Dial a Stocktaker and access our services</p>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="section">
+    <div class="container">
+      <div class="register-container animate-fade-in">
+        <div class="register-form-container">
+          <form class="form" id="register-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="first-name" class="form-label">First Name</label>
+                <input type="text" id="first-name" class="form-input" placeholder="Enter your first name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="last-name" class="form-label">Last Name</label>
+                <input type="text" id="last-name" class="form-input" placeholder="Enter your last name" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="Create a password" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" id="confirm-password" class="form-input" placeholder="Confirm your password" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-group">
+              <label for="role" class="form-label">User Role</label>
+              <select id="role" class="form-select" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="client">Client</option>
+                <option value="admin">Admin</option>
+                <option value="manager">Manager</option>
+                <option value="counter">Counter</option>
+                <option value="scanner">Scanner</option>
+                <option value="coordinator">Coordinator</option>
+                <option value="group-leader">Group Leader</option>
+              </select>
+            </div>
+            
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="terms" class="form-checkbox-input" required>
+              <label for="terms" class="form-checkbox-label">I agree to the <a href="#" class="form-link">Terms of Service</a> and <a href="#" class="form-link">Privacy Policy</a></label>
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="button button-full">Create Account</button>
+            </div>
+            
+            <div class="form-footer">
+              <p>Already have an account? <a href="login.html" class="form-link">Login here</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-title">Dial a Stocktaker</h3>
+          <p class="footer-text">Providing professional stocktaking services to businesses of all sizes across South Africa.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul>
+            <li>Ground Floor, Braamfontein Centre, Rosebank College Building, 23 Jorissen St, Braamfontein Johannesburg, 2017</li>
+            <li>info@dialastocktaker.com</li>
+            <li>011 403 2369</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2023</span> Dial a Stocktaker. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toast">
+    <div class="toast">
+      <div class="toast-content">
+        <div class="toast-icon success">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <div class="toast-message">Registration successful!</div>
+      </div>
+      <button class="toast-close">×</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Validate form
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      
+      // Simulate registration
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      
+      // Redirect after a short delay
+      setTimeout(function() {
+        window.location.href = 'account.html';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

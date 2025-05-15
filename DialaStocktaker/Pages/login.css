@@ -1,0 +1,39 @@
+
+/* Login Page Specific Styles */
+@import 'common.css';
+
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-form-container {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox-input {
+  margin-right: 0.5rem;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.forgot-password:hover {
+  color: var(--primary);
+}

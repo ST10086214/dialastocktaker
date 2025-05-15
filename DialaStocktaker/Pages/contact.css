@@ -1,0 +1,99 @@
+/* Contact Page Specific Styles */
+@import 'common.css';
+
+/* Contact Section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-card {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.contact-info-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-icon {
+  color: var(--primary);
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-content p {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.map-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 300px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form {
+  height: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-header {
+  padding: 2rem 2rem 0;
+}
+
+.card-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card-header p {
+  color: var(--text-light);
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+}

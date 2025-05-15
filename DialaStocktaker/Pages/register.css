@@ -1,0 +1,14 @@
+/* Register Page Specific Styles */
+@import 'common.css';
+
+.register-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.register-form-container {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}

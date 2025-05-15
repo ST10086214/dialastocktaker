@@ -1,0 +1,116 @@
+/* Services Page Specific Styles */
+@import 'common.css';
+
+/* Service Section */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.service-grid.reverse {
+  grid-template-areas: "image content";
+}
+
+.service-grid.reverse .service-content {
+  grid-area: content;
+}
+
+.service-grid.reverse .service-image {
+  grid-area: image;
+}
+
+.service-content {
+  max-width: 500px;
+}
+
+.service-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.service-text {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.service-subtitle {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-list {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-list li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.service-list li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.service-image img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+.rounded-image {
+  border-radius: var(--radius);
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--primary);
+  color: white;
+  padding: 4rem 0;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-grid, .service-grid.reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "image"
+      "content";
+  }
+  
+  .service-content {
+    max-width: 100%;
+    grid-area: content;
+  }
+  
+  .service-image {
+    grid-area: image;
+    margin-bottom: 2rem;
+  }
+}

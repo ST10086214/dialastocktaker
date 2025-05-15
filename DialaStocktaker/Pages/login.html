@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Dial a Stocktaker</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">Dial a Stocktaker</a>
+        
+        <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        
+        <nav class="desktop-nav">
+          <a href="about.html" class="nav-link">About</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-link active">Login</a>
+          <a href="register.html" class="button">Register</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="faq.html" class="mobile-nav-link">FAQ</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <a href="login.html" class="mobile-nav-link active">Login</a>
+        <a href="register.html" class="mobile-nav-link button">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header animate-fade-in">
+    <div class="container">
+      <h1 class="page-title">Login to Your Account</h1>
+      <p class="page-subtitle">Access your Dial a Stocktaker dashboard</p>
+    </div>
+  </section>
+
+  <!-- Login Form -->
+  <section class="section">
+    <div class="container">
+      <div class="login-container animate-fade-in">
+        <div class="login-form-container">
+          <form class="form" id="login-form">
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group form-checkbox">
+              <input type="checkbox" id="remember" class="form-checkbox-input">
+              <label for="remember" class="form-checkbox-label">Remember me</label>
+              <a href="#" class="form-link forgot-password">Forgot Password?</a>
+            </div>
+            
+            <div class="form-group">
+              <button type="submit" class="button button-full">Login</button>
+            </div>
+            
+            <div class="form-footer">
+              <p>Don't have an account? <a href="register.html" class="form-link">Register here</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-title">Dial a Stocktaker</h3>
+          <p class="footer-text">Providing professional stocktaking services to businesses of all sizes across South Africa.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3 class="footer-title">Contact Us</h3>
+          <ul>
+            <li>Ground Floor, Braamfontein Centre, Rosebank College Building, 23 Jorissen St, Braamfontein Johannesburg, 2017</li>
+            <li>info@dialastocktaker.com</li>
+            <li>011 403 2369</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2023</span> Dial a Stocktaker. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toast">
+    <div class="toast">
+      <div class="toast-content">
+        <div class="toast-icon success">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <div class="toast-message">Login successful!</div>
+      </div>
+      <button class="toast-close">×</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulate login
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      
+      // Redirect after a short delay
+      setTimeout(function() {
+        window.location.href = 'account.html';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
